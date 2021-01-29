@@ -8,13 +8,16 @@
 
 #hxSecNav {
   background-color: $gray-0;
+  background-color: var(--hxSecNav-bgcolor, $gray-0);
+  border-bottom: 0.125rem solid $gray-300;
+  border-bottom: 0.125rem solid var(--hxSecNav-borderbottom, $gray-300);
   height: 3.5rem;
   overflow: hidden;
   width: 100vw;
-  border-bottom: 0.125rem solid $gray-300;
 
   .hxNavLink {
     color: $gray-700;
+    color: var(--hxSecNav-hxNavLink-color, $gray-700);
     display: inline-block;
     font-size: 1rem;
     height: 3.5rem;
@@ -23,26 +26,30 @@
     width: auto;
 
     &:hover {
-      color: $gray-950 !important;
+      color: $purple-500 !important;
+      color: var(--hxSecNav-hxNavLink-hover-color, $purple-500) !important;
     }
 
     &:active {
       color: $gray-0;
+      color: var(--hxSecNav-hxNavLink-active-color, $gray-0);
     }
   }
 
   > hx-disclosure {
-    background-color: transparent;
     color: $gray-700;
+    color: var(--hxSecNav-hxDisclosure-color, $gray-700);
     display: inline-block;
     font-size: 1rem;
     height: 3.5rem;
     line-height: 1;
     padding: 1rem 1.25rem;
     width: auto;
+    outline: none;
 
     > hx-icon {
-      color: $gray-400;
+      color: $gray-600;
+      color: var(--hxSecNav-hxDisclosure-hxIcon-color, $gray-600);
       font-size: 1rem;
       margin-left: 0.625rem;
       margin-top: 0.25rem;
@@ -55,34 +62,68 @@
 
     &[aria-expanded="true"] {
       color: $purple-500;
+      color: var(--hxSecNav-hxDisclosure-aria-expanded-color, $purple-500);
     }
 
     &:hover {
-      color: $gray-950 !important;
+      color: $purple-500 !important;
+      color: var(--hxSecNav-hxDisclosure-hover-color, $purple-500) !important;
     }
 
     &:active {
       color: $gray-0;
+      color: var(--hxSecNav-hxDisclosure-active-color, $gray-0);
+    }
+  }
+
+  > hx-menu.SecNavDropdownMenu {
+    height: 14.06rem;
+    width: 20.93rem;
+
+    .SecNavLeftMenu {
+      float: left;
+      height: 6.56rem;
+      width: 7.62rem;
+    }
+
+    .hxDividerVertical {
+      background-color: $gray-300;
+      background-color: var(--hxSecNav-hxMenu-hxDividerVertical-bgcolor, $gray-300);
+      float: left;
+      height: 11.56rem;
+      margin-top: 0.625rem;
+      width: 0.063rem;
+    }
+
+    .SecNavRightMenu {
+      float: left;
+      height: 11.56rem;
+      width: 8.25rem;
     }
   }
 
   > hx-menu {
     background-color: $gray-0;
-    min-width: 10.5rem;
+    background-color: var(--hxSecNav-hxMenu-bgcolor, $gray-0);
+    box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.5);
+    height: 12.5rem;
     padding: 0;
     top: 14.5rem;
-    box-shadow: 0 0.125rem 0.25rem 0 rgba(0, 0, 0, 0.5);
+    width: 14rem;
 
     hx-menuitem {
       color: $gray-950;
+      color: var(--hxSecNav-hxMenu-hxMenuitem-color, $gray-950);
       padding: 0.5rem 1.25rem;
 
       &:hover {
         color: $purple-500 !important;
+        color: var(--hxSecNav-hxMenu-hxMenuitem-hover-color, $purple-500) !important;
       }
 
       &:active {
         color: $gray-0;
+        color: var(--hxSecNav-hxMenu-hxMenuitem-active-color, $gray-0);
       }
     }
 
@@ -90,15 +131,19 @@
       @include hxSecNavControl(disabled);
 
       color: $gray-600;
+      color: var(--hxSecNav-hxMenu-hxMenuitem-disabled-color, $gray-600);
     }
 
     .hxDivider {
       border-color: $gray-300;
+      border-color: var(--hxSecNav-hxMenu-hxDivider-border-color, $gray-300);
       height: 1px;
       margin: 0.5rem auto 0;
     }
 
     > section > header {
+      color: $gray-700;
+      color: var(--hxSecNav-hxMenu-section-header-color, $gray-700);
       padding-left: 1.25rem;
       padding-top: 0.5rem;
       text-transform: none;

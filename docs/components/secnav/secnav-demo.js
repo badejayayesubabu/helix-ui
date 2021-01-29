@@ -49,17 +49,17 @@ if (document.getElementById('vue-secNavDemo')) {
                       <hx-icon type="bell"></hx-icon>
                       <p>Notifications</p>
                     </a>
-          
+
                     <a href="#" class="selected">
                       <hx-icon type="ticketing"></hx-icon>
                       <p>Tickets</p>
                     </a>
-          
+
                     <a href="#">
                       <hx-icon type="support"></hx-icon>
                       <p>Support</p>
                     </a>
-          
+
                     <a href="#" class="hxDisabled" id="billing">
                       <hx-icon type="billing"></hx-icon>
                       <p>Billing</p>
@@ -68,7 +68,7 @@ if (document.getElementById('vue-secNavDemo')) {
                         in your organization to request access to this item.
                       </hx-tooltip>
                     </a>
-          
+
                     <a href="#">
                       <hx-icon type="account"></hx-icon>
                       <p>Account</p>
@@ -99,7 +99,7 @@ if (document.getElementById('vue-secNavDemo')) {
                 </div>
               </div>
             </nav>
-          
+
             <!-- Secondary Navigation -->
             <nav id="hxSecNav">
               <a href="#" class="hxNavLink">SecNav One</a>
@@ -133,6 +133,29 @@ if (document.getElementById('vue-secNavDemo')) {
                   </header>
                   <hx-menuitem>Link item 2-1</hx-menuitem>
                   <hx-menuitem>Link item 2-2</hx-menuitem>
+                </section>
+              </hx-menu>
+              <hx-disclosure aria-controls="secnav-option-menu-three">
+                <span>SecNav Four</span>
+                <hx-icon class="hxPrimary" type="angle-down"></hx-icon>
+              </hx-disclosure>
+              <hx-menu class = "SecNavDropdownMenu" id="secnav-option-menu-three">
+                <section class="SecNavLeftMenu">
+                    <header>
+                        L1 Section
+                    </header>
+                    <hx-menuitem>Link item 1</hx-menuitem>
+                    <hx-menuitem>Link item 2</hx-menuitem>
+                </section>
+                <div class="hxDividerVertical"></div>
+                <section class="SecNavRightMenu">
+                    <header>
+                        L1 Section
+                    </header>
+                    <hx-menuitem>Link item 1-1</hx-menuitem>
+                    <hx-menuitem>Link item 1-2</hx-menuitem>
+                    <hx-menuitem>Link item 1-1</hx-menuitem>
+                    <hx-menuitem>Link item 1-2</hx-menuitem>
                 </section>
               </hx-menu>
             </nav>
